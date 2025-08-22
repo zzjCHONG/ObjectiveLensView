@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="WpfApp1.ObjectiveLensView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:WpfApp1.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp1"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <TextBlock
+            Margin="20,12,0,0"
+            HorizontalAlignment="Left"
+            FontSize="12"
+            Text="物镜组合" />
+
+        <UniformGrid Margin="5,15,5,0" Columns="6">
+            <controls:ObjectiveRadioButton
+                x:Name="Bt1"
+                Width="68"
+                Height="80"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BottomLabel="/0.13"
+                GroupIndex="1"
+                TopLabel="4x" />
+
+            <controls:ObjectiveRadioButton
+                x:Name="Bt2"
+                Width="68"
+                Height="80"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BottomLabel="/0.25"
+                GroupIndex="2"
+                TopLabel="10x" />
+
+            <controls:ObjectiveRadioButton
+                x:Name="Bt3"
+                Width="68"
+                Height="80"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BottomLabel="/0.45"
+                GroupIndex="3"
+                TopLabel="20x" />
+
+            <controls:ObjectiveRadioButton
+                x:Name="Bt4"
+                Width="68"
+                Height="80"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BottomLabel="/0.65"
+                GroupIndex="4"
+                TopLabel="40x" />
+
+            <controls:ObjectiveRadioButton
+                x:Name="Bt5"
+                Width="68"
+                Height="80"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BottomLabel="/1.10"
+                GroupIndex="5"
+                TopLabel="60x" />
+
+            <controls:ObjectiveRadioButton
+                x:Name="Bt6"
+                Width="68"
+                Height="80"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BottomLabel="/1.40"
+                GroupIndex="6"
+                TopLabel="100x" />
+        </UniformGrid>
+    </StackPanel>
+</UserControl>

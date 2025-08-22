@@ -35,7 +35,9 @@ namespace WpfApp1.Controls
                 {
                     WriteIndented = true
                 });
-                File.WriteAllText(DefaultFileName, jsonString);
+
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, DefaultFileName);
+                File.WriteAllText(path, jsonString);
             }
             catch (Exception ex)
             {
@@ -49,9 +51,10 @@ namespace WpfApp1.Controls
         {
             try
             {
-                if (!File.Exists(DefaultFileName)) return CreateDefaultSettings();
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, DefaultFileName);
+                if (!File.Exists(path)) return CreateDefaultSettings();
+                string jsonString = File.ReadAllText(path);
 
-                string jsonString = File.ReadAllText(DefaultFileName);
                 var models = JsonSerializer.Deserialize<List<ObjectiveRadioButtonModel>>(jsonString);
                 return models ?? CreateDefaultSettings();
             }
